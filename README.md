@@ -2,14 +2,6 @@
 Extension for the [MagicMirror](https://github.com/MichMich/MagicMirror). 
 Interfaces with the Blink home security cameras, displays snapshots and latest videos.
 
-**Notes:**
-* This is dependent upon a required fix to the dependency- `node-blink-security`, as login fails due to a misallignment with the Blink API.
-Please see my PR [here](https://github.com/madshall/node-blink-security/pull/56)
-* While we wait for a fix in `node-blink-security`, you could also workaround the problem yourself, for now, by performing the following, **after the installation of the module**:
-  * `nano ~/MagicMirror/modules/MMM-BlinkCameraIntegration/node_modules/node-blink-security/lib/blink.js`
-  * Go to line #398 and change it to the following: `if (this.auth_2FA && (body.client || {}).verification_required) {`
-  * Save and re-run your mirror
-
 **Next to be added:** 
 
 * Support periodic snapshots from the cameras
@@ -26,7 +18,14 @@ git clone https://github.com/eric-h-st/MMM-BlinkCameraIntegration.git
 cd MMM-BlinkCameraIntegration
 npm install
 ````
-
+**Notes:**
+* This is dependent upon a required fix to the dependency- `node-blink-security`, as login fails due to a misallignment with the Blink API.
+Please see my PR [here](https://github.com/madshall/node-blink-security/pull/56)
+* While we wait for a fix in `node-blink-security`, you could also workaround the problem yourself, for now, by performing the following, **after the installation of the module**:
+  * `nano ~/MagicMirror/modules/MMM-BlinkCameraIntegration/node_modules/node-blink-security/lib/blink.js`
+  * Go to line #398 and change it to the following: `if (this.auth_2FA && (body.client || {}).verification_required) {`
+  * Save and re-run your mirror
+  
 ## Using the module
 
 To use this module, add it to the modules array in the `config/config.js` file:
