@@ -1,0 +1,27 @@
+{
+  "name": "Magic-Mirror-Module-Blink-Camera-Integration",
+  "version": "1.0.0",
+  "description": "Blink camera integration module for the Magic Mirror.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eric-h-st/MMM-BlinkCameraIntegration"
+  },
+  "keywords": [
+    "magic mirror",
+    "smart mirror",
+    "Blink",
+    "module",
+    "camera"
+  ],
+  "author": "Eric H.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eric-h-st/MMM-BlinkCameraIntegration/issues"
+  },
+  "dependencies": {
+    "node-blink-security": "latest",
+    "request": "latest",
+    "base64-stream": "latest",
+    "stream-string": "latest"
+  }
+}
