@@ -89,9 +89,9 @@ The following properties can be configured:
 		<tr>
 			<td><code>displayLatestVideoMode</code></td>
       <td>What should trigger displaying the newest motion video?<br>
-				<br><b>Possible values:</b> <code>email address string</code>
-				<br><b>Default value:</b> <code>number</code>, as follows:
-        <br><table>
+				<br><b>Possible values:</b> <code>number</code>, as follows:
+        <br>
+	  <table>
         	<thead>
           <tr>
             <th>Value to use</th>
@@ -109,8 +109,9 @@ The following properties can be configured:
              <tr>
                <td>2</td><td>UPON_USERPRESENCE</td><td>Hold the latest video until <code>USER_PRESENCE</code> notification is deteced, to allow for the video to be displayed when the user is in front of the mirror</td>
              </tr>
-        </table>              
-			</td>
+        </table>        
+	    <br><b>Default value:</b> <code>1</code>
+	</td>
 		</tr>
 		<tr>
 			<td><code>motionPollingIntervalInSeconds</code></td>
@@ -122,7 +123,7 @@ The following properties can be configured:
 		<tr>
 			<td><code>videoRepeats</code></td>
       <td>Number of times to loop the latest motion video before fading it out<br>
-				<br><b>Possible values:</b> <code>possitive number, or 0 to repeat until a new video is detected</code>
+				<br><b>Possible values:</b> <code>positive number, or 0 to repeat until a new video is detected</code>
 				<br><b>Default value:</b> <code>1</code>
 			</td>
 		</tr>
