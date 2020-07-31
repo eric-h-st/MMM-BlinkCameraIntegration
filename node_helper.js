@@ -35,7 +35,9 @@ module.exports = NodeHelper.create({
           if (!self.blink) {          
             self.config = payload;
             self.lastVideoTime = new Date(0);
-            self.blink = new Blink(self.config.email, self.config.password, self.config.deviceId);
+            self.blink = new Blink(self.config.email, self.config.password, self.config.deviceId, {
+              auth_2FA: true
+            });
 
             self.log("Connecting Blink...");
             self.blink.setupSystem().then(() => {
